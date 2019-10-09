@@ -1,17 +1,27 @@
-import React from "react"
-
+/* eslint-disable jsx-a11y/img-redundant-alt */
+import React, {useState} from "react";
 
 const PhotoCard = props => {
-    return (
-        <div className="photo-card" >
-            <h2>{props.title}</h2>
-            <h3>{props.date}</h3>
-            <img className="apodImg" alt="from NASA's Astronomy Picture of the Day " src={props.imgUrl} />
-            <p><h3>Description: </h3> {props.description}</p>
-        </div>
-    )
-}
-export default PhotoCard
+  
+  return (
+    <div className="photo-card">
+      <div className="heading">
+      <h2>{props.title}</h2>
+      <h3>{props.date}</h3>
+      <input className="datePicker"type="date" onChange={(e)=>{props.setFormData(e.target.value);}}></input>
+      </div>
+      <img
+        className="apodImg"
+        alt="from NASA's Astronomy Picture of the Day "
+        src={props.imgUrl}
+      />
+      <p>
+        <span className="description">Description:</span> {props.description}
+      </p>
+    </div>
+  );
+};
+export default PhotoCard;
 
 // data:
 // date: "2019-10-09"
