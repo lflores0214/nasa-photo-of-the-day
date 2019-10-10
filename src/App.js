@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./App.css";
 import CardHolder from "./components/CardHolder"
 import ProjectContainer from "./components/ProjectContainer"
+import Footer from "./components/Footer"
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
         <CardHolder />
         <ProjectContainer />
+        <Footer />
     </div>
   );
 }
