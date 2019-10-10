@@ -62,6 +62,11 @@ q:before, q:after {
   line-height: 1.5;
   font-size: 1.2rem;
   background-color:#97bbc7;
+  -webkit-box-shadow: -1px 1px 5px 9px #1c2f60;
+ -moz-box-shadow: -1px 1px 5px 9px #1c2f60;
+ box-shadow: -1px 1px 5px 9px #1c2f60;
+
+
   
 }
 input[type="date"]{
@@ -129,11 +134,15 @@ input[type="date"]:focus{
   background-color: #97bbc7;
   font-size: 1.4rem;
   padding: 2% 0 2% 0;
+  -webkit-box-shadow: -1px 1px 5px 9px #1c2f60;
+ -moz-box-shadow: -1px 1px 5px 9px #1c2f60;
+ box-shadow: -1px 1px 5px 9px #1c2f60;
 }
 
 .footer a {
   text-decoration: none;
   color: #303b5b;
+  
 }
 .footer a:hover{
   color: firebrick;
