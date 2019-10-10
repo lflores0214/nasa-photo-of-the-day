@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, {useState} from "react";
+import React from "react";
 
 const PhotoCard = props => {
   
@@ -15,8 +15,9 @@ const PhotoCard = props => {
         alt="from NASA's Astronomy Picture of the Day "
         src={props.imgUrl}
       />
-      <p>
-        <span className="description">Description:</span> {props.description}
+      <p className="description">Description</p>
+      <p className="apodText">
+         {props.description}
       </p>
     </div>
   );
