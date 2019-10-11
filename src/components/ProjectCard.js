@@ -1,39 +1,47 @@
 import React from "react";
+import {
+  Card,
+  Heading,
+  ProjectHeader,
+  HeadingSpan,
+  Text
+} from "./StyleComponents";
 
 const ProjectCard = props => {
   return (
-    <div className="projectCard">
-        <h1 className="projects">Nasa projects</h1>
-      <div className="projectHeader">
-        
+    <Card>
+      <Heading type="bigger" className="projects">
+        Nasa projects
+      </Heading>
+      <ProjectHeader>
         <h2 className="projHead">
-          <span className="heading">Project Title:</span>
+          <HeadingSpan>Project Title:</HeadingSpan>
           {props.title}
         </h2>
 
         <h2 className="projHead">
-          <span className="heading">Lead Organization:</span>
+          <HeadingSpan>Lead Organization:</HeadingSpan>
           {props.leadOrganization}
           <span>({props.orgAcronym})</span>
         </h2>
-        <h4 className="projHead1">
-          <span className="heading">City:</span>
+        <h4 className="projHead2">
+          <HeadingSpan>City:</HeadingSpan>
           {props.city}, {props.state}
         </h4>
         <h3 className="projHead2">
-          <span className="heading">Project Status:</span>
+          <HeadingSpan>Project Status:</HeadingSpan>
           {props.status}
         </h3>
         <h3 className="projHead2">
-          <span className="heading">Project Lenght:</span>
+          <HeadingSpan>Project Lenght:</HeadingSpan>
           {props.startDate}-{props.endDate}{" "}
         </h3>
         <h3 className="projHead2">
-          <span className="heading">Project id:</span>
+          <HeadingSpan>Project id:</HeadingSpan>
           {props.id}
         </h3>
         <h3 className="projHead2">
-          <span className="heading">Change Project: </span>
+          <HeadingSpan>Change Project: </HeadingSpan>
           <input
             className="idPicker"
             type="number"
@@ -46,19 +54,17 @@ const ProjectCard = props => {
             }}
           />
         </h3>
-      </div>
+      </ProjectHeader>
       <div className="projectText">
-        <p>
-          <span className="projectHeading">Project Description:</span>{" "}
-          {props.description}
-        </p>
+        <Text>
+          <HeadingSpan>Project Description:</HeadingSpan> {props.description}
+        </Text>
         <br />
-        <p>
-          <span className="projectHeading">Project Benefits:</span>{" "}
-          {props.benefits}
-        </p>
+        <Text>
+          <HeadingSpan>Project Benefits:</HeadingSpan> {props.benefits}
+        </Text>
       </div>
-    </div>
+    </Card>
   );
 };
 

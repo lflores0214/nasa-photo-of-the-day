@@ -1,25 +1,28 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
+import { Card, Header, ImgCard, Text, Heading } from "./StyleComponents";
 
 const PhotoCard = props => {
-  
   return (
-    <div className="photo-card">
-      <div className="heading">
-      <h2>{props.title}</h2>
-      <h3>{props.date}</h3>
-      <input className="datePicker"type="date" onChange={(e)=>{props.setFormData(e.target.value);}}></input>
-      </div>
-      <img
-        className="apodImg"
+    <Card>
+      <Header>
+        <h2>{props.title}</h2>
+        <h3>{props.dateFormat}</h3>
+        <input
+          className="datePicker"
+          type="date"
+          onChange={e => {
+            props.setFormData(e.target.value);
+          }}
+        ></input>
+      </Header>
+      <ImgCard
         alt="from NASA's Astronomy Picture of the Day "
         src={props.imgUrl}
-      />
-      <p className="description">Description</p>
-      <p className="apodText">
-         {props.description}
-      </p>
-    </div>
+      ></ImgCard>
+      <Heading>Description</Heading>
+      <Text>{props.description}</Text>
+    </Card>
   );
 };
 export default PhotoCard;

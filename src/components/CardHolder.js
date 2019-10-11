@@ -4,8 +4,9 @@ import PhotoCard from "./PhotoCard";
 
 export default function CardHolder() {
     let today = new Date();
-    let date = `${today.getFullYear()}-${today.getMonth()}-0${today.getDate()}`
-    // console.log(date)
+    let date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`
+    let dateFormat = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`
+    console.log(today.getMonth())
     const [formData, setFormData]= useState(date)
   const [apod, setApod] = useState([]);
 //   const [imgDate, setimgDate] = useState();
@@ -28,6 +29,7 @@ export default function CardHolder() {
   return (
     <div className="container">
       <PhotoCard
+        dateFormat={dateFormat}
         setFormData={setFormData}
         title={apod.title}
         imgUrl={apod.hdurl}
