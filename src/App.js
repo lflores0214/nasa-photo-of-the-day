@@ -1,13 +1,17 @@
 import React from "react";
 import "./App.css";
+import CardHolder from "./components/CardHolder"
+import ProjectContainer from "./components/ProjectContainer"
+import Footer from "./components/Footer"
+
 
 function App() {
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+        <CardHolder />
+        <ProjectContainer />
+        <Footer />
     </div>
   );
 }
